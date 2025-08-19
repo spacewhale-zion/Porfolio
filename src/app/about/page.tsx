@@ -124,7 +124,7 @@ export default function AboutPage() {
           <div className="space-y-8">
             {experience.map((exp) => (
               <div
-                key={exp.title}
+                key={`${exp.title}-${exp.year}`}
                 className="bg-gray-50 dark:bg-gray-700 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
