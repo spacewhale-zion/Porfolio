@@ -36,7 +36,6 @@ src/
 │   ├── Hero.tsx        # Hero section
 │   ├── Skills.tsx      # Skills section
 │   ├── Projects.tsx    # Projects showcase
-│   ├── Contact.tsx     # Contact form
 │   └── Footer.tsx      # Footer
 └── types/              # TypeScript types
 ```
@@ -168,7 +167,7 @@ This project is open source and available under the [MIT License](LICENSE).
 If you have any questions or need help, feel free to:
 
 - Open an issue on GitHub
-- Contact me at [your-email@example.com]
+- Contact me at [aryanrajwork47@gmail.com]
 - Check the [Next.js documentation](https://nextjs.org/docs)
 
 ---
