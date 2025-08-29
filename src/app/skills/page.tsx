@@ -9,10 +9,10 @@ const skillCategories = [
     icon: <Code className="h-8 w-8" />,
     description: 'Strong foundation in programming languages and data structures & algorithms',
     skills: [
-      { name: 'C++', level: 90, projects: 20, description: 'Efficient coding, STL, and advanced problem-solving' },
-      { name: 'C', level: 80,  projects: 10, description: 'System-level programming and memory management' },
-      { name: 'Python', level: 85, projects: 15, description: 'Scripting, data analysis, and ML applications' },
-      { name: 'JavaScript', level: 88, projects: 25, description: 'Frontend and backend development with ES6+' }
+      { name: 'C++', level: 90, description: 'Efficient coding, STL, and advanced problem-solving' },
+      { name: 'C', level: 80, description: 'System-level programming and memory management' },
+      { name: 'Python', level: 85, description: 'Scripting, data analysis, and ML applications' },
+      { name: 'JavaScript', level: 88, description: 'Frontend and backend development with ES6+' }
     ]
   },
   {
@@ -21,15 +21,15 @@ const skillCategories = [
     icon: <Database className="h-8 w-8" />,
     description: 'Full-stack development with modern frameworks and tools',
     skills: [
-      { name: 'HTML/CSS', level: 85, projects: 30, description: 'Semantic HTML, responsive and accessible CSS' },
-      { name: 'Bootstrap', level: 75,  projects: 15, description: 'Rapid UI development with responsive design' },
-      { name: 'Tailwind CSS', level: 85,  projects: 18, description: 'Utility-first CSS for fast and scalable UI development' },
-      { name: 'MERN Stack', level: 88, projects: 20, description: 'MongoDB, Express.js, React.js, Node.js full-stack apps' },
-      { name: 'Next.js', level: 85,  projects: 12, description: 'SSR, SSG, and API routes for React applications' },
-      { name: 'TypeScript', level: 80,  projects: 10, description: 'Type-safe JavaScript development' },
-      { name: 'REST APIs', level: 85, projects: 22, description: 'Scalable backend APIs with proper authentication' },
-      { name: 'WebSockets & Socket.io', level: 80,  projects: 8, description: 'Real-time communication and live apps' },
-      { name: 'JWT & OAuth', level: 75,  projects: 10, description: 'Authentication and secure session management' }
+      { name: 'HTML/CSS', level: 85, description: 'Semantic HTML, responsive and accessible CSS' },
+      { name: 'Bootstrap', level: 75, description: 'Rapid UI development with responsive design' },
+      { name: 'Tailwind CSS', level: 85, description: 'Utility-first CSS for fast and scalable UI development' },
+      { name: 'MERN Stack', level: 88, description: 'MongoDB, Express.js, React.js, Node.js full-stack apps' },
+      { name: 'Next.js', level: 85, description: 'SSR, SSG, and API routes for React applications' },
+      { name: 'TypeScript', level: 80, description: 'Type-safe JavaScript development' },
+      { name: 'REST APIs', level: 85, description: 'Scalable backend APIs with proper authentication' },
+      { name: 'WebSockets & Socket.io', level: 80, description: 'Real-time communication and live apps' },
+      { name: 'JWT & OAuth', level: 75, description: 'Authentication and secure session management' }
     ]
   },
   {
@@ -38,10 +38,10 @@ const skillCategories = [
     icon: <Zap className="h-8 w-8" />,
     description: 'Machine learning and data science libraries',
     skills: [
-      { name: 'TensorFlow', level: 80,  projects: 6, description: 'Building and training ML models' },
-      { name: 'NumPy', level: 85, projects: 10, description: 'Efficient numerical computations' },
-      { name: 'Pandas', level: 85, projects: 12, description: 'Data analysis and manipulation' },
-      { name: 'Matplotlib', level: 80,  projects: 8, description: 'Data visualization and charts' }
+      { name: 'TensorFlow', level: 80, description: 'Building and training ML models' },
+      { name: 'NumPy', level: 85, description: 'Efficient numerical computations' },
+      { name: 'Pandas', level: 85, description: 'Data analysis and manipulation' },
+      { name: 'Matplotlib', level: 80, description: 'Data visualization and charts' }
     ]
   },
   {
@@ -50,13 +50,13 @@ const skillCategories = [
     icon: <Globe className="h-8 w-8" />,
     description: 'Tools for deployment, automation, and infrastructure management',
     skills: [
-      { name: 'Git & GitHub', level: 90, projects: 40, description: 'Version control, collaboration, CI/CD workflows' },
-      { name: 'Docker', level: 80,  projects: 12, description: 'Containerization and microservices' },
-      { name: 'AWS', level: 75,  projects: 8, description: 'Cloud computing and deployments' },
-      { name: 'Firebase', level: 80,  projects: 10, description: 'Authentication, hosting, and real-time database' },
-      { name: 'Cloudinary', level: 75,  projects: 6, description: 'Media storage and optimization' },
-      { name: 'Render & Vercel', level: 80,  projects: 10, description: 'Fast and easy web deployments' },
-      { name: 'MongoDB & Redis', level: 85, projects: 20, description: 'NoSQL database and caching for performance' }
+      { name: 'Git & GitHub', level: 90, description: 'Version control, collaboration, CI/CD workflows' },
+      { name: 'Docker', level: 80, description: 'Containerization and microservices' },
+      { name: 'AWS', level: 75, description: 'Cloud computing and deployments' },
+      { name: 'Firebase', level: 80, description: 'Authentication, hosting, and real-time database' },
+      { name: 'Cloudinary', level: 75, description: 'Media storage and optimization' },
+      { name: 'Render & Vercel', level: 80, description: 'Fast and easy web deployments' },
+      { name: 'MongoDB & Redis', level: 85, description: 'NoSQL database and caching for performance' }
     ]
   },
   {
@@ -65,15 +65,16 @@ const skillCategories = [
     icon: <Palette className="h-8 w-8" />,
     description: 'Personal and professional attributes',
     skills: [
-      { name: 'Communication', level: 85, projects: 0, description: 'Clear and effective communication' },
-      { name: 'Team Collaboration', level: 85, projects: 0, description: 'Working effectively with diverse teams' },
-      { name: 'Problem-Solving', level: 90, projects: 0, description: 'Critical thinking and analytical skills' },
-      { name: 'Critical Thinking', level: 88, projects: 0, description: 'Evaluating problems logically and creatively' },
-      { name: 'Leadership', level: 80,  projects: 0, description: 'Guiding and mentoring peers' },
-      { name: 'Work Ethic', level: 85, projects: 0, description: 'Commitment and responsibility' }
+      { name: 'Communication', level: 85, description: 'Clear and effective communication' },
+      { name: 'Team Collaboration', level: 85, description: 'Working effectively with diverse teams' },
+      { name: 'Problem-Solving', level: 90, description: 'Critical thinking and analytical skills' },
+      { name: 'Critical Thinking', level: 88, description: 'Evaluating problems logically and creatively' },
+      { name: 'Leadership', level: 80, description: 'Guiding and mentoring peers' },
+      { name: 'Work Ethic', level: 85, description: 'Commitment and responsibility' }
     ]
   }
 ];
+
 
 
   const learningGoals = [
