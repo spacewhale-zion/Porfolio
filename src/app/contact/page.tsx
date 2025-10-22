@@ -10,7 +10,7 @@ export default function ContactPage() {
     message: "",
   });
   const [status, setStatus] = useState("");
-
+  const [isSubmitting, setIsSubmitting] = useState(false); 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -19,6 +19,9 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (isSubmitting)return ;
+
+    setIsSubmitting(true);
     setStatus("Sending...");
 
     try {
@@ -36,6 +39,8 @@ export default function ContactPage() {
       }
     } catch (error) {
       setStatus("❌ Error sending message.");
+    }finally{
+      setIsSubmitting(false);
     }
   };
 
@@ -108,6 +113,7 @@ export default function ContactPage() {
                 className="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl shadow-lg space-y-6"
               >
                 <input
+                  disabled={isSubmitting}
                   type="text"
                   name="name"
                   value={form.name}
@@ -117,6 +123,8 @@ export default function ContactPage() {
                   className="w-full p-4 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none"
                 />
                 <input
+                  disabled={isSubmitting}
+
                   type="email"
                   name="email"
                   value={form.email}
@@ -126,6 +134,8 @@ export default function ContactPage() {
                   className="w-full p-4 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none"
                 />
                 <input
+                  disabled={isSubmitting}
+
                   type="text"
                   name="subject"
                   value={form.subject}
@@ -135,6 +145,8 @@ export default function ContactPage() {
                   className="w-full p-4 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none"
                 />
                 <textarea
+                  disabled={isSubmitting}
+
                   name="message"
                   value={form.message}
                   onChange={handleChange}
@@ -144,6 +156,7 @@ export default function ContactPage() {
                   className="w-full p-4 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none"
                 />
                 <button
+                  disabled={isSubmitting}
                   type="submit"
                   className="w-full py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition shadow-md"
                 >
