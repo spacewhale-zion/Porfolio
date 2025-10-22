@@ -9,12 +9,15 @@ export async function POST(req: Request) {
       return NextResponse.json({ message: "Missing fields" }, { status: 400 });
     }
     
+    console.log(process.env.EMAIL_PASS);
     console.log("EMAIL_USER:", process.env.EMAIL_USER);
 console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "✅ Loaded" : "❌ Missing");
 
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host:"smtp.gmail.com",
+      port:587,
+      secure:false,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
